@@ -55,15 +55,15 @@ void loop(void)
 			bomba_activa = 0;
 			syslog(LOG_INFO, "fin riego");
 		}
-		digitalWrite(21, HIGH);
-	    delay(500);
-    	digitalWrite(21, LOW);
+			digitalWrite(21, HIGH);
+			delay(500);
+			digitalWrite(21, LOW);
 	}
 
 	if (time(NULL) >= (last_ok_time+INTERVALO_OK)) {
 		syslog(LOG_INFO, "regador ok");
 		last_ok_time = time(NULL);
 	}
-	
+
 	delay(500);
 }
