@@ -12,7 +12,7 @@ static time_t last_time;
 static time_t last_ok_time;
 static int bomba_activa = 0;
 
-static int horas_riego[] = {8, 20, -1};
+static int horas_riego[] = {8, 17, 18, 19, 20, -1};
 
 int es_hora(void) {
 	int rv = 0;
